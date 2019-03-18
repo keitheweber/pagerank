@@ -71,6 +71,7 @@ java -jar build/lib/pagerank-all-1.0-SNAPSHOT.fatJar -i data/input_file.txt -o d
 Each line should contain 2 symbols separated with a space. This represents a directional link from symbol 1 to symbol 2.
 
 Example file contents:
+
 a b
 b c
 c a
@@ -80,6 +81,7 @@ c a
 The output file contains a header consisting of 4 lines that describe the inputs that were used to run the application and the number of iterations that occurred. The header is followed by a single blank line, then a line for each node in the directed graph and it's computed page rank value.
 
 Example file contents:
+
 Max number of iterations: 100
 Teleport parameter: 0.85
 Convergence parameter: 0.05
