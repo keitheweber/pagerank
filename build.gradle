@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+mainClassName = 'Main'
+version '1.0-SNAPSHOT'
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Version': version,
+                'Main-Class': 'Main'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'ch.qos.logback:logback-core:1.1.7',
+            'ch.qos.logback:logback-classic:1.1.7',
+            'org.slf4j:slf4j-simple:1.7.21',
+            'com.github.pcj:google-options:1.0.0'
+
+
+    testCompile(
+            'org.junit.jupiter:junit-jupiter-api:5.4.0'
+    )
+    testRuntime(
+            'org.junit.jupiter:junit-jupiter-engine:5.4.0',
+            'org.junit.vintage:junit-vintage-engine:5.4.0'
+    )
+}

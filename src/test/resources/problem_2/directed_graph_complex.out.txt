@@ -1,0 +1,11 @@
+Max number of iterations: 100
+Teleport parameter: 0.85
+Convergence parameter: 0.05
+Number of iterations occurred: 100
+
+a 9.837889991835734E-12
+b 4.857685091294437E-12
+c 7.065550070628057E-12
+d 1.0380316226808898E-11
+e 5.1315694145266525E-12
+f 4.086732767754351E-12
