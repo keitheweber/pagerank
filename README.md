@@ -83,13 +83,20 @@ The output file contains a header consisting of 4 lines that describe the inputs
 Example file contents:
 
 Max number of iterations: 100
+
 Teleport parameter: 0.85
+
 Convergence parameter: 0.05
+
 Number of iterations occurred: 1
 
+
 a 0.3333333333333333
+
 b 0.3333333333333333
+
 c 0.3333333333333333
+
 
 # Details
 
